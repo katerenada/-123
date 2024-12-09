@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    // ÊÚÑíİ ãÕİæİÉ ËäÇÆíÉ ÇáÃÈÚÇÏ (ãÕİæİÉ ãÑÈÚÉ)
     int Mat[4][4] = {
         {1, 2, 3, 4},
         {5, 6, 7, 8},
@@ -9,8 +8,8 @@ int main() {
         {13, 14, 15, 16}
     };
 
-    // ØÈÇÚÉ ÇáãÕİæİÉ ÇáÃÕáíÉ
-    printf("ÇáãÕİæİÉ ÇáÃÕáíÉ:\n");
+    // Print The original matrix
+    printf("donner The original matrix :\n");
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             printf("%d\t", Mat[i][j]);
@@ -18,7 +17,7 @@ int main() {
         printf("\n");
     }
 
-    // ÊÈÇÏá ÇáŞØÑíä
+    // Invert the matrix
     for (int i = 0; i < 4; i++) {
         for (int j = i + 1; j < 4; j++) {
             int temp = Mat[i][j];
@@ -27,8 +26,8 @@ int main() {
         }
     }
 
-    // ØÈÇÚÉ ÇáãÕİæİÉ ÈÚÏ ÊÈÇÏá ÇáŞØÑíä
-    printf("\nÇáãÕİæİÉ ÈÚÏ ÊÈÇÏá ÇáŞØÑíä:\n");
+    // Print the matrix after inverting it
+    printf("\ndonner Matrix after inverse:\n");
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             printf("%d\t", Mat[i][j]);
