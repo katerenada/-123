@@ -2,13 +2,13 @@
 #include <stdlib.h>
 
 char *ChargerChaine(int N) {
-    char *chaine = (char*)malloc(N + 1);  //  Œ’Ì’ –«ﬂ—… ·⁄œœ N + 1 (·‹ '\0')
+    char *chaine = (char*)malloc(N + 1);  
     if (chaine == NULL) {
         printf("Memory allocation error\n");
         exit(1);
     }
     printf("Enter the series: ");
-    scanf("%s", chaine);  // ﬁ—«¡… «·”·”·… «·‰’Ì… »«” Œœ«„ scanf
+    scanf("%s", chaine);   
 
     return chaine;
 }
@@ -27,7 +27,7 @@ void ChargerTab(char *p, char Tab[]) {
         Tab[i] = p[i];
         i++;
     }
-    Tab[i] = '\0';  // «· √ﬂœ „‰ √‰ «·„’›Ê›…  ‰ ÂÌ »‹ '\0'
+    Tab[i] = '\0';  // 
 }
 
 void InverserTab(char Tab[], int n) {
@@ -48,36 +48,30 @@ void AfficherTab(char Tab[], int n) {
 
 int main() {
     int N;
-
-    // ﬁ—«¡… ÿÊ· «·”·”·… »«” Œœ«„ scanf
     printf("Enter the maximum length of the string: ");
-    scanf("%d", &N);  // ﬁ—«¡… ÿÊ· «·”·”·…
+    scanf("%d", &N);  
 
     if (N <= 0) {
         printf("Please enter a positive number for N.\n");
         return 1;
     }
 
-    // ﬁ—«¡… «·”·”·… «·‰’Ì…
+    
     char *chaine = ChargerChaine(N);
 
-    // Õ”«» ÿÊ· «·”·”·…
+    
     int longueur = Longueur(chaine);
 
-    //  Œ’Ì’ «·„’›Ê›… «· Ì ” Œ“‰ «·”·”·…
-    char Tab[longueur + 1];  // «·„’›Ê›… · Œ“Ì‰ «·”·”·…
-    ChargerTab(chaine, Tab);  // ‰”Œ «·”·”·… ≈·Ï «·„’›Ê›…
+    char Tab[longueur + 1];  
+    ChargerTab(chaine, Tab);  
 
-    // ⁄—÷ «·”·”·… «·√’·Ì…
     printf("Original series: ");
     AfficherTab(Tab, longueur);
 
-    // ⁄ﬂ” «·”·”·…
     InverserTab(Tab, longueur);
     printf("Inverse series: ");
     AfficherTab(Tab, longueur);
 
-    //  Õ—Ì— «·–«ﬂ—… «·„Œ’’…
     free(chaine);
 
     return 0;
