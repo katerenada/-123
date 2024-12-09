@@ -1,18 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//  ⁄—Ì› »‰Ì… «·⁄‰’— ›Ì «·ﬁ«∆„…
 typedef struct element {
     int val;
     struct element *suivant;
 } element;
 
-// œ«·… ·≈‰‘«¡ ﬁ«∆„… ›«—€…
 element *creerListe() {
     return NULL;
 }
 
-// œ«·… ·≈÷«›… ⁄‰«’— „‰ „’›Ê›… ≈·Ï ﬁ«∆„…
 element *chargerListe(int Tab[], int n, element *liste) {
     for (int i = n - 1; i >= 0; i--) {
         element *nouveau = (element*)malloc(sizeof(element));
@@ -23,7 +20,6 @@ element *chargerListe(int Tab[], int n, element *liste) {
     return liste;
 }
 
-// œ«·… ·ÿ»«⁄… «·ﬁ«∆„…
 void afficherListe(element *liste) {
     while (liste != NULL) {
         printf("%d ", liste->val);
@@ -32,7 +28,7 @@ void afficherListe(element *liste) {
     printf("\n");
 }
 
-// œ«·… ·Õ–› «·⁄‰’— «·√ŒÌ— „‰ «·ﬁ«∆„…
+// √è√á√°√â √°√ç√ê√ù √á√°√ö√§√ï√ë √á√°√É√é√≠√ë √£√§ √á√°√û√á√Ü√£√â
 element *supprimerEnFin(element *liste) {
     if (liste == NULL) {
         return NULL;
@@ -50,7 +46,6 @@ element *supprimerEnFin(element *liste) {
     return liste;
 }
 
-// œ«·… ·≈÷«›… ⁄‰’— ›Ì »œ«Ì… «·ﬁ«∆„…
 element *ajouterEnDebut(element *liste, int valeur) {
     element *nouveau = (element*)malloc(sizeof(element));
     nouveau->val = valeur;
@@ -58,7 +53,6 @@ element *ajouterEnDebut(element *liste, int valeur) {
     return nouveau;
 }
 
-// œ«·… · ›—Ì€ «·ﬁ«∆„…
 void viderListe(element *liste) {
     while (liste != NULL) {
         element *tmp = liste;
