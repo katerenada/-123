@@ -14,8 +14,8 @@ char *ChargerChaine(int N) {
 }
 
 int Longueur(char *ch) {
-    int len = 0;
-    while (ch[len] != '\0') {
+    int i = 0;
+    while (ch[i] != '\0') {
         len++;
     }
     return len;
