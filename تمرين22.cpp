@@ -8,7 +8,7 @@ int main() {
         {13, 14, 15, 16}
     };
 
-    // Print The original matrix
+    // طباعة المصفوفة الأصلية
     printf("donner The original matrix :\n");
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
@@ -17,7 +17,7 @@ int main() {
         printf("\n");
     }
 
-    // Invert the matrix
+    // عكس المصفوفة
     for (int i = 0; i < 4; i++) {
         for (int j = i + 1; j < 4; j++) {
             int temp = Mat[i][j];
@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    // Print the matrix after inverting it
+    // طباعة المصفوفة بعد عكسها
     printf("\ndonner Matrix after inverse:\n");
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
