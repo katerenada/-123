@@ -5,7 +5,7 @@ char *ChargerChaine(int N) {
     char *chaine = (char*)malloc(N + 1);  
     if (chaine == NULL) {
         printf("Memory allocation error\n");
-        exit(1);
+        return 1;
     }
     printf("Enter the series: ");
     scanf("%s", chaine);   
@@ -16,9 +16,9 @@ char *ChargerChaine(int N) {
 int Longueur(char *ch) {
     int i = 0;
     while (ch[i] != '\0') {
-        len++;
+        i++;
     }
-    return len;
+    return i;
 }
 
 void ChargerTab(char *p, char Tab[]) {
