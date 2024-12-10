@@ -28,7 +28,6 @@ void afficherListe(element *liste) {
     printf("\n");
 }
 
-// ÏÇáÉ áÍÐÝ ÇáÚäÕÑ ÇáÃÎíÑ ãä ÇáÞÇÆãÉ
 element *supprimerEnFin(element *liste) {
     if (liste == NULL) {
         return NULL;
