@@ -6,26 +6,26 @@ char *ChargerChaine(int N) {
     char *chaine = (char*)malloc(N + 1);   
     if (chaine == NULL) {
         printf("Memory allocation error\n");  // إذا فشل تخصيص الذاكرة
-    exit(1);
+    exit(1);  // إنهاء البرنامج إذا فشلت الذاكرة
     }
     printf("Enter the series: ");
     scanf("%s", chaine);   // قراءة السلسلة النصية
 
-    return chaine;
+    return chaine;   // إرجاع المؤشر إلى السلسلة المخصصة
 }
 
 int Longueur(char *ch) {
     int i = 0;
     while (ch[i] != '\0') { // نمر عبر السلسلة حتى نصل إلى نهاية السلسلة
-        i++;   // زيادة العداد
+        i++;   //   زيادة العداد لكل حرف في السلسلة
     }
-    return i;   // إرجاع الطول
+    return i;   // إرجاع طول السلسلة
 }
 
-// تحميل السلسلة من المستخدم
+//  تحميل او نقل  السلسلة من المستخدم الى مصفوفة 
 void ChargerTab(char *p, char Tab[]) {
     int i = 0;
-    while (p[i] != '\0') {  // ننسخ السلسلة حرفًا بحرف
+    while (p[i] != '\0') {  // ننسخ السلسلة حرفًا بحرف الى مصفوفة
         Tab[i] = p[i];
         i++;
     }
