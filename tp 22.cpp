@@ -6,7 +6,7 @@ char *ChargerChaine(int N) {
     char *chaine = (char*)malloc(N + 1);   
     if (chaine == NULL) {
         printf("Memory allocation error\n");  // إذا فشل تخصيص الذاكرة
-      return NULL;
+    exit(1);
     }
     printf("Enter the series: ");
     scanf("%s", chaine);   // قراءة السلسلة النصية
